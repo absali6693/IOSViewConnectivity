@@ -40,7 +40,7 @@
 
 -(void)sendDataToDisplayViewController:(Task *)task
 {
-    Task *data = task;//[[DataController alloc] init];
+    Task *data = task;
 
      self.taskLabel.text= data.task;
      self.descriptionLabel.text = data.descriptionOfTask;
