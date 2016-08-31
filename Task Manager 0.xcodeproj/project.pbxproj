@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		117870631D76EC6E006A3A26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117870621D76EC6E006A3A26 /* main.m */; };
+		117870661D76EC6E006A3A26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117870651D76EC6E006A3A26 /* AppDelegate.m */; };
+		117870691D76EC6E006A3A26 /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117870681D76EC6E006A3A26 /* DisplayViewController.m */; };
+		1178706C1D76EC6E006A3A26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1178706A1D76EC6E006A3A26 /* Main.storyboard */; };
+		1178706F1D76EC6E006A3A26 /* Task_Manager_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1178706D1D76EC6E006A3A26 /* Task_Manager_0.xcdatamodeld */; };
+		117870711D76EC6E006A3A26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117870701D76EC6E006A3A26 /* Assets.xcassets */; };
+		117870741D76EC6E006A3A26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117870721D76EC6E006A3A26 /* LaunchScreen.storyboard */; };
+		1178707F1D76EC6E006A3A26 /* Task_Manager_0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1178707E1D76EC6E006A3A26 /* Task_Manager_0Tests.m */; };
+		1178708A1D76EC6F006A3A26 /* Task_Manager_0UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 117870891D76EC6F006A3A26 /* Task_Manager_0UITests.m */; };
+		117870991D76ECA7006A3A26 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117870981D76ECA7006A3A26 /* AddViewController.m */; };
+		1178709F1D76F83B006A3A26 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 1178709E1D76F83B006A3A26 /* Task.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1178707B1D76EC6E006A3A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 117870561D76EC6E006A3A26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1178705D1D76EC6E006A3A26;
+			remoteInfo = "Task Manager 0";
+		};
+		117870861D76EC6E006A3A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 117870561D76EC6E006A3A26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1178705D1D76EC6E006A3A26;
+			remoteInfo = "Task Manager 0";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1178705E1D76EC6E006A3A26 /* Task Manager 0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Manager 0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117870621D76EC6E006A3A26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		117870641D76EC6E006A3A26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		117870651D76EC6E006A3A26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		117870671D76EC6E006A3A26 /* DisplayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayViewController.h; sourceTree = "<group>"; };
+		117870681D76EC6E006A3A26 /* DisplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayViewController.m; sourceTree = "<group>"; };
+		1178706B1D76EC6E006A3A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1178706E1D76EC6E006A3A26 /* Task_Manager_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task_Manager_0.xcdatamodel; sourceTree = "<group>"; };
+		117870701D76EC6E006A3A26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		117870731D76EC6E006A3A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		117870751D76EC6E006A3A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1178707A1D76EC6E006A3A26 /* Task Manager 0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task Manager 0Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1178707E1D76EC6E006A3A26 /* Task_Manager_0Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Task_Manager_0Tests.m; sourceTree = "<group>"; };
+		117870801D76EC6E006A3A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		117870851D76EC6E006A3A26 /* Task Manager 0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task Manager 0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117870891D76EC6F006A3A26 /* Task_Manager_0UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Task_Manager_0UITests.m; sourceTree = "<group>"; };
+		1178708B1D76EC6F006A3A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		117870971D76ECA7006A3A26 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		117870981D76ECA7006A3A26 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		1178709D1D76F83B006A3A26 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		1178709E1D76F83B006A3A26 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		117870A01D770B68006A3A26 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		117870A11D770F40006A3A26 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1178705B1D76EC6E006A3A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117870771D76EC6E006A3A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117870821D76EC6E006A3A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		117870551D76EC6E006A3A26 = {
+			isa = PBXGroup;
+			children = (
+				117870601D76EC6E006A3A26 /* Task Manager 0 */,
+				1178707D1D76EC6E006A3A26 /* Task Manager 0Tests */,
+				117870881D76EC6F006A3A26 /* Task Manager 0UITests */,
+				1178705F1D76EC6E006A3A26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1178705F1D76EC6E006A3A26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1178705E1D76EC6E006A3A26 /* Task Manager 0.app */,
+				1178707A1D76EC6E006A3A26 /* Task Manager 0Tests.xctest */,
+				117870851D76EC6E006A3A26 /* Task Manager 0UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		117870601D76EC6E006A3A26 /* Task Manager 0 */ = {
+			isa = PBXGroup;
+			children = (
+				117870A01D770B68006A3A26 /* PrefixHeader.pch */,
+				117870A11D770F40006A3A26 /* Constants.h */,
+				117870641D76EC6E006A3A26 /* AppDelegate.h */,
+				117870651D76EC6E006A3A26 /* AppDelegate.m */,
+				1178709D1D76F83B006A3A26 /* Task.h */,
+				1178709E1D76F83B006A3A26 /* Task.m */,
+				117870971D76ECA7006A3A26 /* AddViewController.h */,
+				117870981D76ECA7006A3A26 /* AddViewController.m */,
+				117870671D76EC6E006A3A26 /* DisplayViewController.h */,
+				117870681D76EC6E006A3A26 /* DisplayViewController.m */,
+				1178706A1D76EC6E006A3A26 /* Main.storyboard */,
+				117870701D76EC6E006A3A26 /* Assets.xcassets */,
+				117870721D76EC6E006A3A26 /* LaunchScreen.storyboard */,
+				117870751D76EC6E006A3A26 /* Info.plist */,
+				1178706D1D76EC6E006A3A26 /* Task_Manager_0.xcdatamodeld */,
+				117870611D76EC6E006A3A26 /* Supporting Files */,
+			);
+			path = "Task Manager 0";
+			sourceTree = "<group>";
+		};
+		117870611D76EC6E006A3A26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				117870621D76EC6E006A3A26 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1178707D1D76EC6E006A3A26 /* Task Manager 0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1178707E1D76EC6E006A3A26 /* Task_Manager_0Tests.m */,
+				117870801D76EC6E006A3A26 /* Info.plist */,
+			);
+			path = "Task Manager 0Tests";
+			sourceTree = "<group>";
+		};
+		117870881D76EC6F006A3A26 /* Task Manager 0UITests */ = {
+			isa = PBXGroup;
+			children = (
+				117870891D76EC6F006A3A26 /* Task_Manager_0UITests.m */,
+				1178708B1D76EC6F006A3A26 /* Info.plist */,
+			);
+			path = "Task Manager 0UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1178705D1D76EC6E006A3A26 /* Task Manager 0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1178708E1D76EC6F006A3A26 /* Build configuration list for PBXNativeTarget "Task Manager 0" */;
+			buildPhases = (
+				1178705A1D76EC6E006A3A26 /* Sources */,
+				1178705B1D76EC6E006A3A26 /* Frameworks */,
+				1178705C1D76EC6E006A3A26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Task Manager 0";
+			productName = "Task Manager 0";
+			productReference = 1178705E1D76EC6E006A3A26 /* Task Manager 0.app */;
+			productType = "com.apple.product-type.application";
+		};
+		117870791D76EC6E006A3A26 /* Task Manager 0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117870911D76EC6F006A3A26 /* Build configuration list for PBXNativeTarget "Task Manager 0Tests" */;
+			buildPhases = (
+				117870761D76EC6E006A3A26 /* Sources */,
+				117870771D76EC6E006A3A26 /* Frameworks */,
+				117870781D76EC6E006A3A26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1178707C1D76EC6E006A3A26 /* PBXTargetDependency */,
+			);
+			name = "Task Manager 0Tests";
+			productName = "Task Manager 0Tests";
+			productReference = 1178707A1D76EC6E006A3A26 /* Task Manager 0Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		117870841D76EC6E006A3A26 /* Task Manager 0UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117870941D76EC6F006A3A26 /* Build configuration list for PBXNativeTarget "Task Manager 0UITests" */;
+			buildPhases = (
+				117870811D76EC6E006A3A26 /* Sources */,
+				117870821D76EC6E006A3A26 /* Frameworks */,
+				117870831D76EC6E006A3A26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				117870871D76EC6E006A3A26 /* PBXTargetDependency */,
+			);
+			name = "Task Manager 0UITests";
+			productName = "Task Manager 0UITests";
+			productReference = 117870851D76EC6E006A3A26 /* Task Manager 0UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		117870561D76EC6E006A3A26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = GrepRuby;
+				TargetAttributes = {
+					1178705D1D76EC6E006A3A26 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					117870791D76EC6E006A3A26 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 1178705D1D76EC6E006A3A26;
+					};
+					117870841D76EC6E006A3A26 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 1178705D1D76EC6E006A3A26;
+					};
+				};
+			};
+			buildConfigurationList = 117870591D76EC6E006A3A26 /* Build configuration list for PBXProject "Task Manager 0" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 117870551D76EC6E006A3A26;
+			productRefGroup = 1178705F1D76EC6E006A3A26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1178705D1D76EC6E006A3A26 /* Task Manager 0 */,
+				117870791D76EC6E006A3A26 /* Task Manager 0Tests */,
+				117870841D76EC6E006A3A26 /* Task Manager 0UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1178705C1D76EC6E006A3A26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117870741D76EC6E006A3A26 /* LaunchScreen.storyboard in Resources */,
+				117870711D76EC6E006A3A26 /* Assets.xcassets in Resources */,
+				1178706C1D76EC6E006A3A26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117870781D76EC6E006A3A26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117870831D76EC6E006A3A26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1178705A1D76EC6E006A3A26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117870691D76EC6E006A3A26 /* DisplayViewController.m in Sources */,
+				117870661D76EC6E006A3A26 /* AppDelegate.m in Sources */,
+				117870991D76ECA7006A3A26 /* AddViewController.m in Sources */,
+				117870631D76EC6E006A3A26 /* main.m in Sources */,
+				1178706F1D76EC6E006A3A26 /* Task_Manager_0.xcdatamodeld in Sources */,
+				1178709F1D76F83B006A3A26 /* Task.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117870761D76EC6E006A3A26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1178707F1D76EC6E006A3A26 /* Task_Manager_0Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117870811D76EC6E006A3A26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1178708A1D76EC6F006A3A26 /* Task_Manager_0UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1178707C1D76EC6E006A3A26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1178705D1D76EC6E006A3A26 /* Task Manager 0 */;
+			targetProxy = 1178707B1D76EC6E006A3A26 /* PBXContainerItemProxy */;
+		};
+		117870871D76EC6E006A3A26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1178705D1D76EC6E006A3A26 /* Task Manager 0 */;
+			targetProxy = 117870861D76EC6E006A3A26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1178706A1D76EC6E006A3A26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1178706B1D76EC6E006A3A26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		117870721D76EC6E006A3A26 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				117870731D76EC6E006A3A26 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1178708C1D76EC6F006A3A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1178708D1D76EC6F006A3A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1178708F1D76EC6F006A3A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Task Manager 0/PrefixHeader.pch";
+				INFOPLIST_FILE = "Task Manager 0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GrepRuby.Task-Manager-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		117870901D76EC6F006A3A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Task Manager 0/PrefixHeader.pch";
+				INFOPLIST_FILE = "Task Manager 0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GrepRuby.Task-Manager-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		117870921D76EC6F006A3A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Task Manager 0Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GrepRuby.Task-Manager-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Task Manager 0.app/Task Manager 0";
+			};
+			name = Debug;
+		};
+		117870931D76EC6F006A3A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Task Manager 0Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GrepRuby.Task-Manager-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Task Manager 0.app/Task Manager 0";
+			};
+			name = Release;
+		};
+		117870951D76EC6F006A3A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Task Manager 0UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GrepRuby.Task-Manager-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Task Manager 0";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		117870961D76EC6F006A3A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Task Manager 0UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GrepRuby.Task-Manager-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Task Manager 0";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		117870591D76EC6E006A3A26 /* Build configuration list for PBXProject "Task Manager 0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1178708C1D76EC6F006A3A26 /* Debug */,
+				1178708D1D76EC6F006A3A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1178708E1D76EC6F006A3A26 /* Build configuration list for PBXNativeTarget "Task Manager 0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1178708F1D76EC6F006A3A26 /* Debug */,
+				117870901D76EC6F006A3A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117870911D76EC6F006A3A26 /* Build configuration list for PBXNativeTarget "Task Manager 0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117870921D76EC6F006A3A26 /* Debug */,
+				117870931D76EC6F006A3A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117870941D76EC6F006A3A26 /* Build configuration list for PBXNativeTarget "Task Manager 0UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117870951D76EC6F006A3A26 /* Debug */,
+				117870961D76EC6F006A3A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1178706D1D76EC6E006A3A26 /* Task_Manager_0.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1178706E1D76EC6E006A3A26 /* Task_Manager_0.xcdatamodel */,
+			);
+			currentVersion = 1178706E1D76EC6E006A3A26 /* Task_Manager_0.xcdatamodel */;
+			path = Task_Manager_0.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 117870561D76EC6E006A3A26 /* Project object */;
+}
