@@ -29,22 +29,21 @@
 }
 
 
+
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSLog(@"pressed");
     if([segue.identifier isEqualToString:addSegue]){
-        AddViewController *d = segue.destinationViewController;
-        d.delegate=self;
+        AddViewController *addViewController = segue.destinationViewController;
+        addViewController.delegate = self;
         
     }
 }
 
--(void)sendDataToDisplayViewController:(Task *)task
-{
-    Task *data = task;
-
+-(void)sendDataToDisplayViewController:(Task *)task{
+     Task *data = task;
      self.taskLabel.text= data.task;
      self.descriptionLabel.text = data.descriptionOfTask;
-      self.timeLabel.text = data.timeOfTask;
+     self.timeLabel.text = data.timeOfTask;
 }
 
 @end

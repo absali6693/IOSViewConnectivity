@@ -26,21 +26,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    
+}
+
+
 - (IBAction)cancelButtonClicked:(id)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 
-
--(void)viewWillDisappear:(BOOL)animated
-{
-
-}
 - (IBAction)add:(id)sender {
     Task *data = [[Task alloc]init];
-    data.task=self.taskField.text;
-    data.descriptionOfTask=self.descriptionField.text;
-    data.timeOfTask=self.timeRequiredField.text;
+    data.task = self.taskField.text;
+    data.descriptionOfTask = self.descriptionField.text;
+    data.timeOfTask = self.timeRequiredField.text;
     [self.delegate sendDataToDisplayViewController:data];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }

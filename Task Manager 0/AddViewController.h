@@ -21,7 +21,7 @@
 
 @interface AddViewController : UIViewController
 
-@property(nonatomic,assign)id delegate;
+@property(nonatomic,weak)id delegate;
 @property Task* all;
 
 @end
