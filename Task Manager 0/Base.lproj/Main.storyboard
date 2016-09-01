@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yNH-RR-u2D">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Display View Controller-->
+        <!--Task Manager-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DisplayViewController" sceneMemberID="viewController">
@@ -20,8 +20,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBM-Qh-Xi3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZE-4L-5I6" userLabel="Task Table View">
+                                        <rect key="frame" x="0.0" y="96" width="317" height="376"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="C2g-1L-oPk"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="hL2-tU-fLL"/>
+                                        </connections>
+                                    </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXI-Ld-7go">
-                                        <rect key="frame" x="277" y="28" width="30" height="30"/>
+                                        <rect key="frame" x="282" y="67" width="30" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.2986673265" blue="0.14706149369999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -32,28 +41,19 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="mZm-yg-Erb" kind="presentation" identifier="PassSegue" id="YyF-Wn-yAA"/>
+                                            <segue destination="mZm-yg-Erb" kind="show" identifier="PassSegue" id="YyF-Wn-yAA"/>
                                         </connections>
                                     </button>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZE-4L-5I6" userLabel="Task Table View">
-                                        <rect key="frame" x="0.0" y="96" width="317" height="376"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="C2g-1L-oPk"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="hL2-tU-fLL"/>
-                                        </connections>
-                                    </tableView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="yZE-4L-5I6" secondAttribute="bottom" constant="8" id="5te-qN-4Mo"/>
-                                    <constraint firstItem="yZE-4L-5I6" firstAttribute="top" secondItem="hXI-Ld-7go" secondAttribute="bottom" constant="38" id="Az2-uo-07M"/>
+                                    <constraint firstItem="yZE-4L-5I6" firstAttribute="top" secondItem="hXI-Ld-7go" secondAttribute="bottom" constant="-1" id="Az2-uo-07M"/>
                                     <constraint firstItem="yZE-4L-5I6" firstAttribute="leading" secondItem="kBM-Qh-Xi3" secondAttribute="leading" id="LDj-vL-reI"/>
-                                    <constraint firstAttribute="trailing" secondItem="hXI-Ld-7go" secondAttribute="trailing" constant="13" id="NeL-zj-dIX"/>
-                                    <constraint firstItem="hXI-Ld-7go" firstAttribute="top" secondItem="kBM-Qh-Xi3" secondAttribute="top" constant="28" id="OeC-NF-iLX"/>
-                                    <constraint firstItem="hXI-Ld-7go" firstAttribute="leading" secondItem="yZE-4L-5I6" secondAttribute="trailing" constant="-40" id="g3t-1H-LLq"/>
+                                    <constraint firstAttribute="trailing" secondItem="hXI-Ld-7go" secondAttribute="trailing" constant="8" id="NeL-zj-dIX"/>
+                                    <constraint firstItem="hXI-Ld-7go" firstAttribute="top" secondItem="kBM-Qh-Xi3" secondAttribute="top" constant="67" id="OeC-NF-iLX"/>
+                                    <constraint firstItem="hXI-Ld-7go" firstAttribute="leading" secondItem="yZE-4L-5I6" secondAttribute="trailing" constant="-35" id="g3t-1H-LLq"/>
                                     <constraint firstAttribute="trailing" secondItem="yZE-4L-5I6" secondAttribute="trailing" constant="3" id="ha5-Yf-dOx"/>
                                 </constraints>
                             </view>
@@ -67,6 +67,7 @@
                             <constraint firstItem="kBM-Qh-Xi3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y7P-4T-Ygc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Task Manager" id="YMb-pA-bMb"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="TableviewContainer" destination="yZE-4L-5I6" id="71w-Oi-VrG"/>
@@ -74,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="285"/>
+            <point key="canvasLocation" x="1045" y="285"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="JOg-2M-CgX">
@@ -92,7 +93,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91a-b4-GqY">
-                                        <rect key="frame" x="8" y="75" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="125" width="304" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="DN3-Ns-y8Z"/>
@@ -101,7 +102,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yno-9H-HyN">
-                                        <rect key="frame" x="8" y="125" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="175" width="304" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Aeg-iM-B2w"/>
@@ -134,7 +135,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-70-YtV">
-                                        <rect key="frame" x="8" y="24" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="75" width="304" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="VBs-Fx-xDS"/>
@@ -153,11 +154,11 @@
                                     <constraint firstItem="eeq-HU-TAY" firstAttribute="leading" secondItem="6mM-2U-PCA" secondAttribute="leading" constant="8" id="JtM-fI-ZwJ"/>
                                     <constraint firstAttribute="trailing" secondItem="MIb-uw-NHp" secondAttribute="trailing" constant="8" id="Obd-UE-3GG"/>
                                     <constraint firstAttribute="trailing" secondItem="KoN-70-YtV" secondAttribute="trailing" constant="8" id="OwY-IK-TUn"/>
-                                    <constraint firstItem="MIb-uw-NHp" firstAttribute="top" secondItem="Yno-9H-HyN" secondAttribute="bottom" constant="140" id="PXI-gf-0rV"/>
-                                    <constraint firstItem="KoN-70-YtV" firstAttribute="top" secondItem="6mM-2U-PCA" secondAttribute="top" constant="24" id="UgO-D6-oGb"/>
+                                    <constraint firstItem="MIb-uw-NHp" firstAttribute="top" secondItem="Yno-9H-HyN" secondAttribute="bottom" constant="90" id="PXI-gf-0rV"/>
+                                    <constraint firstItem="KoN-70-YtV" firstAttribute="top" secondItem="6mM-2U-PCA" secondAttribute="top" constant="75" id="UgO-D6-oGb"/>
                                     <constraint firstAttribute="trailing" secondItem="Yno-9H-HyN" secondAttribute="trailing" constant="8" id="gYd-Ej-rlb"/>
                                     <constraint firstItem="Yno-9H-HyN" firstAttribute="top" secondItem="91a-b4-GqY" secondAttribute="bottom" constant="20" id="kLH-Ea-0xg"/>
-                                    <constraint firstItem="91a-b4-GqY" firstAttribute="top" secondItem="KoN-70-YtV" secondAttribute="bottom" constant="21" id="nlp-Kj-siE"/>
+                                    <constraint firstItem="91a-b4-GqY" firstAttribute="top" secondItem="KoN-70-YtV" secondAttribute="bottom" constant="20" id="nlp-Kj-siE"/>
                                     <constraint firstItem="91a-b4-GqY" firstAttribute="leading" secondItem="6mM-2U-PCA" secondAttribute="leading" constant="8" id="p5z-jp-1Tz"/>
                                     <constraint firstAttribute="trailing" secondItem="91a-b4-GqY" secondAttribute="trailing" constant="8" id="rjI-2M-qXr"/>
                                     <constraint firstItem="MIb-uw-NHp" firstAttribute="leading" secondItem="6mM-2U-PCA" secondAttribute="leading" constant="8" id="zSH-DC-Bsf"/>
@@ -182,7 +183,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yap-5o-M3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="285"/>
+            <point key="canvasLocation" x="1429" y="285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dSY-8H-FUf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yNH-RR-u2D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f9e-0S-lmq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rc0-zR-hL2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mtf-QD-f1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="285"/>
         </scene>
     </scenes>
 </document>

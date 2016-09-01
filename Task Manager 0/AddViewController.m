@@ -43,7 +43,8 @@
     data.descriptionOfTask = self.descriptionField.text;
     data.timeOfTask = self.timeRequiredField.text;
     [self.delegate sendDataToDisplayViewController:data];
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    [[self navigationController] popViewControllerAnimated:YES];
+    //[self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end
