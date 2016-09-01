@@ -7,6 +7,7 @@
 //
 
 #import "AddViewController.h"
+#import "DisplayViewController.h"
 
 @interface AddViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *taskField;
@@ -27,24 +28,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear : (BOOL)animated {
     
 }
 
-
-- (IBAction)cancelButtonClicked:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:NULL];
+- (IBAction)cancelButtonClicked : (id)sender {
+    [[self navigationController] popViewControllerAnimated : YES];
 }
 
-
-- (IBAction)add:(id)sender {
+- (IBAction)add : (id)sender {
     Task *data = [[Task alloc]init];
-    data.task = self.taskField.text;
-    data.descriptionOfTask = self.descriptionField.text;
-    data.timeOfTask = self.timeRequiredField.text;
-    [self.delegate sendDataToDisplayViewController:data];
-    [[self navigationController] popViewControllerAnimated:YES];
-    //[self dismissViewControllerAnimated:YES completion:NULL];
+    if(self.descriptionField.text.length < 1 || self.taskField.text.length < 1|| self.timeRequiredField.text.length < 1) {
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle : @"Error"
+                                      message : @"Please Fill all the fields."
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* ok = [UIAlertAction
+                             actionWithTitle : @"OK"
+                             style:UIAlertActionStyleDefault
+                             handler : ^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated : YES completion : nil];
+                                 
+                             }];
+        [alert addAction : ok];
+        [self presentViewController : alert animated : YES completion : nil];
+    }
+    else {
+        data.task = self.taskField.text;
+        data.descriptionOfTask = self.descriptionField.text;
+        data.timeOfTask = self.timeRequiredField.text;
+        [self.delegate sendDataToDisplayViewController : data];
+        [[self navigationController] popViewControllerAnimated : YES];
+    }
 }
 
 @end

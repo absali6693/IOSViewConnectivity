@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AddViewController.h"
-
 
 @interface DisplayViewController : UIViewController
-
 
 @end
 

@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *task;
 @property (strong, nonatomic) IBOutlet UILabel *descriptionForTask;
 @property (strong, nonatomic) IBOutlet UILabel *timeRequired;
-
+@property (weak, nonatomic) IBOutlet UIButton *deleteTheTaskButton;
+@property (weak, nonatomic) IBOutlet UIButton *editTheTask;
 
 @end

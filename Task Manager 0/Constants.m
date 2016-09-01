@@ -10,3 +10,4 @@
 #import "Constants.h"
 
 NSString *const addSegue = @"PassSegue";
+NSString *const cellPrototype = @"TableCellPrototype";

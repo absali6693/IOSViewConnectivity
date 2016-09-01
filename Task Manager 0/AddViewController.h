@@ -8,20 +8,17 @@
 
 
 
-
-#import "DisplayViewController.h"
-
+#import <UIKit/UIKit.h>
 
 @protocol SendDataProtocol <NSObject>
 
-- (void)sendDataToDisplayViewController: (Task *) task;
-
+- (void)sendDataToDisplayViewController : (Task *)task;
 
 @end
 
 @interface AddViewController : UIViewController
 
-@property(nonatomic,weak)id delegate;
-@property Task* all;
+@property(nonatomic, weak) id delegate;
+@property Task *all;
 
 @end

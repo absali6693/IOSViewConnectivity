@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -19,44 +20,75 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Task" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXW-ka-KkW">
                         <rect key="frame" x="8" y="8" width="65" height="88"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="lsf-QF-fDt"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="DescriptionOfTask" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8p-8h-eTI">
-                        <rect key="frame" x="86" y="8" width="369" height="62"/>
+                        <rect key="frame" x="86" y="8" width="288" height="54"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="TimeRequired" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUD-pI-f32">
-                        <rect key="frame" x="86" y="80" width="369" height="15"/>
+                        <rect key="frame" x="86" y="62" width="288" height="15"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="850-3o-wlH" userLabel="Edit The Task">
+                        <rect key="frame" x="374" y="8" width="81" height="30"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="81" id="GTO-Bc-DXS"/>
+                            <constraint firstAttribute="height" constant="30" id="rIo-Up-NNH"/>
+                        </constraints>
+                        <state key="normal" title="Edit">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0k-gC-0ZB">
+                        <rect key="frame" x="374" y="52" width="81" height="30"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.20000000000000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="ogZ-Yc-dne"/>
+                        </constraints>
+                        <state key="normal" title="Delete">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="T8p-8h-eTI" firstAttribute="top" secondItem="jXW-ka-KkW" secondAttribute="top" id="6Yv-39-BPf"/>
-                    <constraint firstItem="XUD-pI-f32" firstAttribute="top" secondItem="T8p-8h-eTI" secondAttribute="bottom" constant="10" id="7tP-bP-YqX"/>
-                    <constraint firstItem="jXW-ka-KkW" firstAttribute="top" secondItem="K2d-Wc-5VB" secondAttribute="top" constant="8" id="8VC-v2-MBL"/>
-                    <constraint firstItem="jXW-ka-KkW" firstAttribute="leading" secondItem="K2d-Wc-5VB" secondAttribute="leading" constant="8" id="8qO-eM-4LG"/>
-                    <constraint firstAttribute="bottom" secondItem="XUD-pI-f32" secondAttribute="bottom" constant="9" id="AHc-PR-u4d"/>
-                    <constraint firstAttribute="trailing" secondItem="XUD-pI-f32" secondAttribute="trailing" constant="8" id="Bgy-hI-V7Y"/>
-                    <constraint firstItem="XUD-pI-f32" firstAttribute="firstBaseline" secondItem="jXW-ka-KkW" secondAttribute="baseline" id="CbF-Nx-RwO"/>
-                    <constraint firstItem="T8p-8h-eTI" firstAttribute="trailing" secondItem="XUD-pI-f32" secondAttribute="trailing" id="KF4-p5-hCx"/>
-                    <constraint firstItem="T8p-8h-eTI" firstAttribute="leading" secondItem="XUD-pI-f32" secondAttribute="leading" id="NBP-Ae-5UD"/>
-                    <constraint firstAttribute="bottom" secondItem="jXW-ka-KkW" secondAttribute="bottom" constant="8" id="YLt-U3-f2n"/>
-                    <constraint firstItem="XUD-pI-f32" firstAttribute="leading" secondItem="K2d-Wc-5VB" secondAttribute="leading" constant="86" id="dJY-Z1-obF"/>
-                    <constraint firstItem="XUD-pI-f32" firstAttribute="leading" secondItem="jXW-ka-KkW" secondAttribute="trailing" constant="13" id="lrZ-bK-jYx"/>
+                    <constraint firstItem="jXW-ka-KkW" firstAttribute="baseline" secondItem="XUD-pI-f32" secondAttribute="firstBaseline" constant="18" id="2oI-Jy-EYJ"/>
+                    <constraint firstItem="850-3o-wlH" firstAttribute="trailing" secondItem="K2d-Wc-5VB" secondAttribute="trailingMargin" id="FuA-uB-baX"/>
+                    <constraint firstItem="j0k-gC-0ZB" firstAttribute="leading" secondItem="XUD-pI-f32" secondAttribute="trailing" id="OLr-Bt-Epx"/>
+                    <constraint firstItem="jXW-ka-KkW" firstAttribute="leading" secondItem="K2d-Wc-5VB" secondAttribute="leadingMargin" id="OQU-oR-iIS"/>
+                    <constraint firstItem="XUD-pI-f32" firstAttribute="trailing" secondItem="T8p-8h-eTI" secondAttribute="trailing" id="OdJ-3x-FCB"/>
+                    <constraint firstItem="j0k-gC-0ZB" firstAttribute="top" secondItem="850-3o-wlH" secondAttribute="bottom" constant="14" id="RWr-d0-euc"/>
+                    <constraint firstItem="j0k-gC-0ZB" firstAttribute="leading" secondItem="850-3o-wlH" secondAttribute="leading" id="Vwb-I7-nM7"/>
+                    <constraint firstItem="XUD-pI-f32" firstAttribute="top" secondItem="T8p-8h-eTI" secondAttribute="bottom" id="YV0-zt-Huu"/>
+                    <constraint firstItem="T8p-8h-eTI" firstAttribute="leading" secondItem="XUD-pI-f32" secondAttribute="leading" id="eAU-RU-yXd"/>
+                    <constraint firstItem="850-3o-wlH" firstAttribute="top" secondItem="T8p-8h-eTI" secondAttribute="top" id="gtf-w2-M1c"/>
+                    <constraint firstItem="T8p-8h-eTI" firstAttribute="top" secondItem="K2d-Wc-5VB" secondAttribute="topMargin" id="hdt-lA-u1u"/>
+                    <constraint firstItem="T8p-8h-eTI" firstAttribute="top" secondItem="jXW-ka-KkW" secondAttribute="top" id="je2-OX-4bm"/>
+                    <constraint firstItem="850-3o-wlH" firstAttribute="trailing" secondItem="j0k-gC-0ZB" secondAttribute="trailing" id="kkx-iC-5ec"/>
+                    <constraint firstItem="jXW-ka-KkW" firstAttribute="bottom" secondItem="K2d-Wc-5VB" secondAttribute="bottomMargin" id="rUh-3a-7vl"/>
+                    <constraint firstItem="T8p-8h-eTI" firstAttribute="leading" secondItem="jXW-ka-KkW" secondAttribute="trailing" constant="13" id="uw4-Vy-Ads"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="deleteTheTaskButton" destination="j0k-gC-0ZB" id="LgD-AK-0MR"/>
                 <outlet property="descriptionForTask" destination="T8p-8h-eTI" id="kTh-5w-P6T"/>
+                <outlet property="editTheTask" destination="850-3o-wlH" id="o5L-Qh-d84"/>
                 <outlet property="task" destination="jXW-ka-KkW" id="jgN-mT-jzy"/>
                 <outlet property="timeRequired" destination="XUD-pI-f32" id="bbh-fA-y1j"/>
             </connections>

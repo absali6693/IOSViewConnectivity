@@ -10,8 +10,8 @@
 
 @interface Task : NSObject
 
-@property (nonatomic,strong) NSString *task;
-@property (nonatomic,strong) NSString *descriptionOfTask;
-@property (nonatomic,strong) NSString *timeOfTask;
+@property (nonatomic, strong) NSString *task;
+@property (nonatomic, strong) NSString *descriptionOfTask;
+@property (nonatomic, strong) NSString *timeOfTask;
 
 @end

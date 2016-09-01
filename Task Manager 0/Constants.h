@@ -10,5 +10,6 @@
 #define Constants_h
 
 FOUNDATION_EXPORT NSString *const addSegue;
+FOUNDATION_EXPORT NSString *const cellPrototype;
 
 #endif /* Constants_h */

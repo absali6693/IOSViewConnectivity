@@ -119,18 +119,14 @@
 			isa = PBXGroup;
 			children = (
 				117870A01D770B68006A3A26 /* PrefixHeader.pch */,
-				117870A11D770F40006A3A26 /* Constants.h */,
-				11F3BB1E1D7858C900FDD85A /* Constants.m */,
+				11F3BB201D7877A700FDD85A /* Constant */,
 				117870641D76EC6E006A3A26 /* AppDelegate.h */,
 				117870651D76EC6E006A3A26 /* AppDelegate.m */,
 				11F3BB161D783AF700FDD85A /* TableCellPrototype.h */,
 				11F3BB171D783AF700FDD85A /* TableCellPrototype.m */,
 				1178709D1D76F83B006A3A26 /* Task.h */,
 				1178709E1D76F83B006A3A26 /* Task.m */,
-				117870971D76ECA7006A3A26 /* AddViewController.h */,
-				117870981D76ECA7006A3A26 /* AddViewController.m */,
-				117870671D76EC6E006A3A26 /* DisplayViewController.h */,
-				117870681D76EC6E006A3A26 /* DisplayViewController.m */,
+				11F3BB211D7877C000FDD85A /* View */,
 				11F3BB191D78497C00FDD85A /* TableCellPrototype.xib */,
 				1178706A1D76EC6E006A3A26 /* Main.storyboard */,
 				117870701D76EC6E006A3A26 /* Assets.xcassets */,
@@ -166,6 +162,26 @@
 				1178708B1D76EC6F006A3A26 /* Info.plist */,
 			);
 			path = "Task Manager 0UITests";
+			sourceTree = "<group>";
+		};
+		11F3BB201D7877A700FDD85A /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				117870A11D770F40006A3A26 /* Constants.h */,
+				11F3BB1E1D7858C900FDD85A /* Constants.m */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
+		11F3BB211D7877C000FDD85A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				117870971D76ECA7006A3A26 /* AddViewController.h */,
+				117870981D76ECA7006A3A26 /* AddViewController.m */,
+				117870671D76EC6E006A3A26 /* DisplayViewController.h */,
+				117870681D76EC6E006A3A26 /* DisplayViewController.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
