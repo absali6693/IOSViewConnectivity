@@ -12,9 +12,9 @@
 #import "DisplayViewController.h"
 
 
-@protocol senddataProtocol <NSObject>
+@protocol SendDataProtocol <NSObject>
 
--(void)sendDataToDisplayViewController: (Task *) task;
+- (void)sendDataToDisplayViewController: (Task *) task;
 
 
 @end

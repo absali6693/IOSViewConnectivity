@@ -9,7 +9,6 @@
 #ifndef Constants_h
 #define Constants_h
 
-#define addSegue @"PassSegue"
-
+FOUNDATION_EXPORT NSString *const addSegue;
 
 #endif /* Constants_h */
