@@ -8,7 +8,7 @@
         <!--Task Manager-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DisplayViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="DisplayViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,41 +20,41 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBM-Qh-Xi3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXI-Ld-7go" userLabel="Add Button">
-                                        <rect key="frame" x="282" y="67" width="30" height="30"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="1" green="0.2986673265" blue="0.14706149369999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="Aj0-0m-RHI"/>
-                                            <constraint firstAttribute="height" constant="30" id="FxQ-UQ-KRO"/>
-                                        </constraints>
-                                        <state key="normal" title="+">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="mZm-yg-Erb" kind="show" identifier="PassSegue" id="YyF-Wn-yAA"/>
-                                        </connections>
-                                    </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZE-4L-5I6" userLabel="Task Table View">
-                                        <rect key="frame" x="0.0" y="105" width="317" height="367"/>
+                                        <rect key="frame" x="0.0" y="105" width="320" height="367"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="sectionIndexBackgroundColor" red="0.30282640709999997" green="0.30282640709999997" blue="0.30282640709999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="C2g-1L-oPk"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="hL2-tU-fLL"/>
                                         </connections>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXI-Ld-7go" userLabel="Add Button">
+                                        <rect key="frame" x="282" y="67" width="30" height="30"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Aj0-0m-RHI"/>
+                                            <constraint firstAttribute="height" constant="30" id="FxQ-UQ-KRO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="mZm-yg-Erb" kind="show" identifier="PassSegue" id="YyF-Wn-yAA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="yZE-4L-5I6" secondAttribute="bottom" constant="8" id="5te-qN-4Mo"/>
                                     <constraint firstItem="yZE-4L-5I6" firstAttribute="top" secondItem="hXI-Ld-7go" secondAttribute="bottom" constant="8" id="Az2-uo-07M"/>
                                     <constraint firstItem="yZE-4L-5I6" firstAttribute="leading" secondItem="kBM-Qh-Xi3" secondAttribute="leading" id="LDj-vL-reI"/>
                                     <constraint firstAttribute="trailing" secondItem="hXI-Ld-7go" secondAttribute="trailing" constant="8" id="NeL-zj-dIX"/>
                                     <constraint firstItem="hXI-Ld-7go" firstAttribute="top" secondItem="kBM-Qh-Xi3" secondAttribute="top" constant="67" id="OeC-NF-iLX"/>
-                                    <constraint firstAttribute="trailing" secondItem="yZE-4L-5I6" secondAttribute="trailing" constant="3" id="ha5-Yf-dOx"/>
+                                    <constraint firstAttribute="trailing" secondItem="yZE-4L-5I6" secondAttribute="trailing" id="ha5-Yf-dOx"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -80,7 +80,7 @@
         <!--Add View Controller-->
         <scene sceneID="JOg-2M-CgX">
             <objects>
-                <viewController id="mZm-yg-Erb" customClass="AddViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddController" id="mZm-yg-Erb" customClass="AddViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vAm-Hv-eqy"/>
                         <viewControllerLayoutGuide type="bottom" id="CFx-9r-FXF"/>
@@ -95,7 +95,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Igc-Si-jyg" userLabel="View Text Fields">
                                         <rect key="frame" x="0.0" y="64" width="320" height="200"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-70-YtV">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-70-YtV">
                                                 <rect key="frame" x="8" y="51" width="304" height="30"/>
                                                 <animations/>
                                                 <constraints>
@@ -104,7 +104,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yno-9H-HyN">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time required" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yno-9H-HyN">
                                                 <rect key="frame" x="8" y="143" width="304" height="30"/>
                                                 <animations/>
                                                 <constraints>
@@ -113,7 +113,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91a-b4-GqY">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description of task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91a-b4-GqY">
                                                 <rect key="frame" x="8" y="96" width="304" height="30"/>
                                                 <animations/>
                                                 <constraints>
@@ -124,7 +124,6 @@
                                             </textField>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="0.55686346480000004" blue="0.21460780199999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Yno-9H-HyN" secondAttribute="trailing" constant="8" id="2bh-Ln-v1X"/>
                                             <constraint firstItem="KoN-70-YtV" firstAttribute="leading" secondItem="Igc-Si-jyg" secondAttribute="leading" constant="8" id="Bkb-oj-wKb"/>
@@ -166,7 +165,6 @@
                                             </button>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="0.55686346480000004" blue="0.21460780199999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="MIb-uw-NHp" firstAttribute="top" secondItem="1hd-Yi-qhg" secondAttribute="top" constant="53" id="8eS-Xy-lyl"/>
                                             <constraint firstAttribute="trailing" secondItem="eeq-HU-TAY" secondAttribute="trailing" constant="8" id="baw-VR-z5r"/>
@@ -179,7 +177,7 @@
                                     </view>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.55686346476510062" blue="0.21460780201342283" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="1hd-Yi-qhg" secondAttribute="bottom" constant="57" id="0dG-7T-QXA"/>
                                     <constraint firstAttribute="trailing" secondItem="Igc-Si-jyg" secondAttribute="trailing" id="9V3-zh-xqe"/>
@@ -208,9 +206,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="descriptionField" destination="91a-b4-GqY" id="0EI-m0-qsc"/>
-                        <outlet property="taskField" destination="KoN-70-YtV" id="MEw-0z-cXZ"/>
-                        <outlet property="timeRequiredField" destination="Yno-9H-HyN" id="NwC-dR-hmO"/>
+                        <outlet property="addEditButton" destination="MIb-uw-NHp" id="MB2-uv-uMX"/>
+                        <outlet property="descriptionTextField" destination="91a-b4-GqY" id="N7z-ks-xNz"/>
+                        <outlet property="taskTextField" destination="KoN-70-YtV" id="EJq-jW-izT"/>
+                        <outlet property="timeRequiredTextField" destination="Yno-9H-HyN" id="VSF-Yh-vRS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yap-5o-M3m" userLabel="First Responder" sceneMemberID="firstResponder"/>

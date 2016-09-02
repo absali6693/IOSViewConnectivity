@@ -14,4 +14,6 @@
 @property (nonatomic, strong) NSString *descriptionOfTask;
 @property (nonatomic, strong) NSString *timeOfTask;
 
+- (id) initWithTask : (NSString *)task descriptionOfTask : (NSString *)descriptionOfTask timeOfTask :(NSString *)timeOfTask;
+
 @end

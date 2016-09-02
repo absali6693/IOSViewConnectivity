@@ -9,10 +9,14 @@
 #import "AddViewController.h"
 #import "DisplayViewController.h"
 
-@interface AddViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *taskField;
-@property (weak, nonatomic) IBOutlet UITextField *descriptionField;
-@property (weak, nonatomic) IBOutlet UITextField *timeRequiredField;
+@interface AddViewController () {
+    BOOL edit;
+    Task *taskToEdit;
+}
+@property (weak, nonatomic) IBOutlet UITextField *taskTextField;
+@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
+@property (weak, nonatomic) IBOutlet UITextField *timeRequiredTextField;
+@property (weak, nonatomic) IBOutlet UIButton *addEditButton;
 
 @end
 
@@ -20,16 +24,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if(edit == YES) {
+        self.taskTextField.text = taskToEdit.task;
+        self.descriptionTextField.text = taskToEdit.descriptionOfTask;
+        self.timeRequiredTextField.text = taskToEdit.timeOfTask;
+        [self.addEditButton setTitle : @"Edit" forState : UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillDisappear : (BOOL)animated {
-    
 }
 
 - (IBAction)cancelButtonClicked : (id)sender {
@@ -37,30 +41,52 @@
 }
 
 - (IBAction)add : (id)sender {
-    Task *data = [[Task alloc]init];
-    if(self.descriptionField.text.length < 1 || self.taskField.text.length < 1|| self.timeRequiredField.text.length < 1) {
-        UIAlertController * alert=   [UIAlertController
-                                      alertControllerWithTitle : @"Error"
-                                      message : @"Please Fill all the fields."
-                                      preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction* ok = [UIAlertAction
-                             actionWithTitle : @"OK"
-                             style:UIAlertActionStyleDefault
-                             handler : ^(UIAlertAction * action)
-                             {
-                                 [alert dismissViewControllerAnimated : YES completion : nil];
-                                 
-                             }];
-        [alert addAction : ok];
-        [self presentViewController : alert animated : YES completion : nil];
+    Task *data;
+    if(edit == YES) {
+        if(self.descriptionTextField.text.length < 1 || self.taskTextField.text.length < 1|| self.timeRequiredTextField.text.length < 1) {
+            [self showAlert];
+        }
+        else {
+            edit = NO;
+            data = [[Task alloc]initWithTask : self.taskTextField.text descriptionOfTask : self.descriptionTextField.text timeOfTask : self.timeRequiredTextField.text];
+            [self.delegate sendEditedDataToDisplayViewController : data];
+            [[self navigationController] popViewControllerAnimated : YES];
+        }
     }
     else {
-        data.task = self.taskField.text;
-        data.descriptionOfTask = self.descriptionField.text;
-        data.timeOfTask = self.timeRequiredField.text;
-        [self.delegate sendDataToDisplayViewController : data];
-        [[self navigationController] popViewControllerAnimated : YES];
+        if(self.descriptionTextField.text.length < 1 || self.taskTextField.text.length < 1 || self.timeRequiredTextField.text.length < 1) {
+            [self showAlert];
+        }
+        else {
+            data = [[Task alloc]initWithTask : self.taskTextField.text descriptionOfTask : self.descriptionTextField.text timeOfTask : self.timeRequiredTextField.text];
+            data.task = self.taskTextField.text;
+            data.descriptionOfTask = self.descriptionTextField.text;
+            data.timeOfTask = self.timeRequiredTextField.text;
+            [self.delegate sendDataToDisplayViewController : data];
+            [[self navigationController] popViewControllerAnimated : YES];
+        }
     }
 }
 
+- (void)editTask : (Task *)task {
+    edit = YES;
+    taskToEdit = task;
+}
+
+- (void)showAlert {
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle : errorTitle
+                                message : emptyFieldErrorMessage
+                                preferredStyle : UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction
+                         actionWithTitle : @"OK"
+                         style : UIAlertActionStyleDefault
+                         handler : ^(UIAlertAction *action) {
+                             [alert dismissViewControllerAnimated : YES completion : nil];
+                             
+                         }];
+    [alert addAction : ok];
+    [self presentViewController : alert animated : YES completion : nil];
+    
+}
 @end

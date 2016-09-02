@@ -10,4 +10,7 @@
 #import "Constants.h"
 
 NSString *const addSegue = @"PassSegue";
-NSString *const cellPrototype = @"TableCellPrototype";
+NSString *const cellPrototype = @"TableCellPrototype";
+NSString *const emptyFieldErrorMessage = @"Please Fill all the fields.";
+NSString *const errorTitle = @"Error";
+NSString *const addEditController = @"AddController";

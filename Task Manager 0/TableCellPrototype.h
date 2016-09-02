@@ -10,10 +10,10 @@
 
 @interface TableCellPrototype : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *task;
-@property (strong, nonatomic) IBOutlet UILabel *descriptionForTask;
-@property (strong, nonatomic) IBOutlet UILabel *timeRequired;
+@property (strong, nonatomic) IBOutlet UILabel *taskLabel;
+@property (strong, nonatomic) IBOutlet UILabel *descriptionForTaskLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeRequiredLabel;
 @property (weak, nonatomic) IBOutlet UIButton *deleteTheTaskButton;
-@property (weak, nonatomic) IBOutlet UIButton *editTheTask;
+@property (weak, nonatomic) IBOutlet UIButton *editTheTaskButton;
 
 @end

@@ -11,5 +11,8 @@
 
 FOUNDATION_EXPORT NSString *const addSegue;
 FOUNDATION_EXPORT NSString *const cellPrototype;
+FOUNDATION_EXPORT NSString *const emptyFieldErrorMessage;
+FOUNDATION_EXPORT NSString *const errorTitle;
+FOUNDATION_EXPORT NSString *const addEditController;
 
 #endif /* Constants_h */

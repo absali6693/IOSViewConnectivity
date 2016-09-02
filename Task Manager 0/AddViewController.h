@@ -13,12 +13,14 @@
 @protocol SendDataProtocol <NSObject>
 
 - (void)sendDataToDisplayViewController : (Task *)task;
+- (void)sendEditedDataToDisplayViewController : (Task *)task;
 
 @end
 
 @interface AddViewController : UIViewController
 
-@property(nonatomic, weak) id delegate;
-@property Task *all;
+@property (nonatomic, weak) id delegate;
+
+- (void)editTask : (Task *)task;
 
 @end
