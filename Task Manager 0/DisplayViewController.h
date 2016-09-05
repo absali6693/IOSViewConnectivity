@@ -10,5 +10,7 @@
 
 @interface DisplayViewController : UIViewController
 
+- (void)setUserData : (User *)user ;
+
 @end
 

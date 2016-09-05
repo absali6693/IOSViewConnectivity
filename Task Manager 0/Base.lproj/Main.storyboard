@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yNH-RR-u2D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -8,7 +8,7 @@
         <!--Task Manager-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="DisplayViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="displayViewController" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="DisplayViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -39,22 +39,40 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="+">
-                                            <color key="titleColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.38823529410000002" green="0.67450980390000004" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="mZm-yg-Erb" kind="show" identifier="PassSegue" id="YyF-Wn-yAA"/>
+                                            <action selector="addTaskClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oeA-8z-6Ov"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqm-zd-U3G">
+                                        <rect key="frame" x="0.0" y="67" width="85" height="30"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="I6w-fF-N9x"/>
+                                            <constraint firstAttribute="width" constant="85" id="hIk-rJ-sCr"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign out">
+                                            <color key="titleColor" red="0.38823529410000002" green="0.67450980390000004" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signOutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6pp-Xx-CHu"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.38823529411764707" green="0.67450980392156867" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="yZE-4L-5I6" secondAttribute="bottom" constant="8" id="5te-qN-4Mo"/>
+                                    <constraint firstItem="Rqm-zd-U3G" firstAttribute="top" secondItem="kBM-Qh-Xi3" secondAttribute="top" constant="67" id="7PQ-Za-Y8p"/>
                                     <constraint firstItem="yZE-4L-5I6" firstAttribute="top" secondItem="hXI-Ld-7go" secondAttribute="bottom" constant="8" id="Az2-uo-07M"/>
                                     <constraint firstItem="yZE-4L-5I6" firstAttribute="leading" secondItem="kBM-Qh-Xi3" secondAttribute="leading" id="LDj-vL-reI"/>
                                     <constraint firstAttribute="trailing" secondItem="hXI-Ld-7go" secondAttribute="trailing" constant="8" id="NeL-zj-dIX"/>
                                     <constraint firstItem="hXI-Ld-7go" firstAttribute="top" secondItem="kBM-Qh-Xi3" secondAttribute="top" constant="67" id="OeC-NF-iLX"/>
+                                    <constraint firstItem="Rqm-zd-U3G" firstAttribute="leading" secondItem="kBM-Qh-Xi3" secondAttribute="leading" id="d8h-hc-HzP"/>
                                     <constraint firstAttribute="trailing" secondItem="yZE-4L-5I6" secondAttribute="trailing" id="ha5-Yf-dOx"/>
+                                    <constraint firstItem="yZE-4L-5I6" firstAttribute="top" secondItem="Rqm-zd-U3G" secondAttribute="bottom" constant="8" id="iuh-NT-csJ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -177,7 +195,7 @@
                                     </view>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.38823529410000002" green="0.67450980390000004" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="1hd-Yi-qhg" secondAttribute="bottom" constant="57" id="0dG-7T-QXA"/>
                                     <constraint firstAttribute="trailing" secondItem="Igc-Si-jyg" secondAttribute="trailing" id="9V3-zh-xqe"/>
@@ -219,7 +237,7 @@
         <!--Navigation Controller-->
         <scene sceneID="dSY-8H-FUf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yNH-RR-u2D" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="yNH-RR-u2D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f9e-0S-lmq">

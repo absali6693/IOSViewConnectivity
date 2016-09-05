@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1174D4021D7D470A00E2296B /* SignUpSignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1174D4011D7D470A00E2296B /* SignUpSignIn.storyboard */; };
+		1174D4051D7D47D600E2296B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1174D4041D7D47D600E2296B /* SignInViewController.m */; };
+		1174D40C1D7D5A9B00E2296B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1174D40B1D7D5A9B00E2296B /* SignUpViewController.m */; };
+		1174D40F1D7D5F9C00E2296B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1174D40E1D7D5F9C00E2296B /* User.m */; };
 		117870631D76EC6E006A3A26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117870621D76EC6E006A3A26 /* main.m */; };
 		117870661D76EC6E006A3A26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117870651D76EC6E006A3A26 /* AppDelegate.m */; };
 		117870691D76EC6E006A3A26 /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117870681D76EC6E006A3A26 /* DisplayViewController.m */; };
@@ -18,8 +22,8 @@
 		1178708A1D76EC6F006A3A26 /* Task_Manager_0UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 117870891D76EC6F006A3A26 /* Task_Manager_0UITests.m */; };
 		117870991D76ECA7006A3A26 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117870981D76ECA7006A3A26 /* AddViewController.m */; };
 		1178709F1D76F83B006A3A26 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 1178709E1D76F83B006A3A26 /* Task.m */; };
-		11F3BB181D783AF700FDD85A /* TableCellPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F3BB171D783AF700FDD85A /* TableCellPrototype.m */; };
-		11F3BB1A1D78497C00FDD85A /* TableCellPrototype.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F3BB191D78497C00FDD85A /* TableCellPrototype.xib */; };
+		11F3BB181D783AF700FDD85A /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F3BB171D783AF700FDD85A /* TableCell.m */; };
+		11F3BB1A1D78497C00FDD85A /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F3BB191D78497C00FDD85A /* TableCell.xib */; };
 		11F3BB1F1D7858C900FDD85A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F3BB1E1D7858C900FDD85A /* Constants.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1174D4011D7D470A00E2296B /* SignUpSignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpSignIn.storyboard; sourceTree = "<group>"; };
+		1174D4031D7D47D600E2296B /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		1174D4041D7D47D600E2296B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		1174D40A1D7D5A9B00E2296B /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		1174D40B1D7D5A9B00E2296B /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		1174D40D1D7D5F9C00E2296B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		1174D40E1D7D5F9C00E2296B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1178705E1D76EC6E006A3A26 /* Task Manager 0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Manager 0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		117870621D76EC6E006A3A26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		117870641D76EC6E006A3A26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,9 +75,9 @@
 		1178709E1D76F83B006A3A26 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		117870A01D770B68006A3A26 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		117870A11D770F40006A3A26 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		11F3BB161D783AF700FDD85A /* TableCellPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCellPrototype.h; sourceTree = "<group>"; };
-		11F3BB171D783AF700FDD85A /* TableCellPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCellPrototype.m; sourceTree = "<group>"; };
-		11F3BB191D78497C00FDD85A /* TableCellPrototype.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCellPrototype.xib; sourceTree = "<group>"; };
+		11F3BB161D783AF700FDD85A /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
+		11F3BB171D783AF700FDD85A /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		11F3BB191D78497C00FDD85A /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		11F3BB1E1D7858C900FDD85A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +106,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1174D4061D7D557A00E2296B /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				11F3BB161D783AF700FDD85A /* TableCell.h */,
+				11F3BB171D783AF700FDD85A /* TableCell.m */,
+				11F3BB191D78497C00FDD85A /* TableCell.xib */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
+		1174D4071D7D55CD00E2296B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				117870641D76EC6E006A3A26 /* AppDelegate.h */,
+				117870651D76EC6E006A3A26 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1174D4081D7D55EB00E2296B /* SignUpSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				1174D4011D7D470A00E2296B /* SignUpSignIn.storyboard */,
+				1174D4031D7D47D600E2296B /* SignInViewController.h */,
+				1174D4041D7D47D600E2296B /* SignInViewController.m */,
+				1174D40A1D7D5A9B00E2296B /* SignUpViewController.h */,
+				1174D40B1D7D5A9B00E2296B /* SignUpViewController.m */,
+			);
+			name = SignUpSignIn;
+			sourceTree = "<group>";
+		};
+		1174D4091D7D561E00E2296B /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				1178709D1D76F83B006A3A26 /* Task.h */,
+				1178709E1D76F83B006A3A26 /* Task.m */,
+			);
+			name = Task;
+			sourceTree = "<group>";
+		};
+		1174D4101D7D5FA200E2296B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				1174D40D1D7D5F9C00E2296B /* User.h */,
+				1174D40E1D7D5F9C00E2296B /* User.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		117870551D76EC6E006A3A26 = {
 			isa = PBXGroup;
 			children = (
@@ -118,17 +178,15 @@
 		117870601D76EC6E006A3A26 /* Task Manager 0 */ = {
 			isa = PBXGroup;
 			children = (
-				117870A01D770B68006A3A26 /* PrefixHeader.pch */,
+				1174D4071D7D55CD00E2296B /* AppDelegate */,
 				11F3BB201D7877A700FDD85A /* Constant */,
-				117870641D76EC6E006A3A26 /* AppDelegate.h */,
-				117870651D76EC6E006A3A26 /* AppDelegate.m */,
-				11F3BB161D783AF700FDD85A /* TableCellPrototype.h */,
-				11F3BB171D783AF700FDD85A /* TableCellPrototype.m */,
-				11F3BB191D78497C00FDD85A /* TableCellPrototype.xib */,
-				1178709D1D76F83B006A3A26 /* Task.h */,
-				1178709E1D76F83B006A3A26 /* Task.m */,
+				1174D4101D7D5FA200E2296B /* User */,
+				1174D4081D7D55EB00E2296B /* SignUpSignIn */,
+				1174D4061D7D557A00E2296B /* TableCell */,
+				1174D4091D7D561E00E2296B /* Task */,
 				11F3BB211D7877C000FDD85A /* View */,
 				1178706A1D76EC6E006A3A26 /* Main.storyboard */,
+				117870A01D770B68006A3A26 /* PrefixHeader.pch */,
 				117870701D76EC6E006A3A26 /* Assets.xcassets */,
 				117870721D76EC6E006A3A26 /* LaunchScreen.storyboard */,
 				117870751D76EC6E006A3A26 /* Info.plist */,
@@ -288,8 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				117870741D76EC6E006A3A26 /* LaunchScreen.storyboard in Resources */,
-				11F3BB1A1D78497C00FDD85A /* TableCellPrototype.xib in Resources */,
+				11F3BB1A1D78497C00FDD85A /* TableCell.xib in Resources */,
 				117870711D76EC6E006A3A26 /* Assets.xcassets in Resources */,
+				1174D4021D7D470A00E2296B /* SignUpSignIn.storyboard in Resources */,
 				1178706C1D76EC6E006A3A26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,8 +378,11 @@
 				117870661D76EC6E006A3A26 /* AppDelegate.m in Sources */,
 				117870991D76ECA7006A3A26 /* AddViewController.m in Sources */,
 				11F3BB1F1D7858C900FDD85A /* Constants.m in Sources */,
+				1174D4051D7D47D600E2296B /* SignInViewController.m in Sources */,
 				117870631D76EC6E006A3A26 /* main.m in Sources */,
-				11F3BB181D783AF700FDD85A /* TableCellPrototype.m in Sources */,
+				1174D40F1D7D5F9C00E2296B /* User.m in Sources */,
+				1174D40C1D7D5A9B00E2296B /* SignUpViewController.m in Sources */,
+				11F3BB181D783AF700FDD85A /* TableCell.m in Sources */,
 				1178706F1D76EC6E006A3A26 /* Task_Manager_0.xcdatamodeld in Sources */,
 				1178709F1D76F83B006A3A26 /* Task.m in Sources */,
 			);

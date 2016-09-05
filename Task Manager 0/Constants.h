@@ -14,5 +14,10 @@ FOUNDATION_EXPORT NSString *const cellPrototype;
 FOUNDATION_EXPORT NSString *const emptyFieldErrorMessage;
 FOUNDATION_EXPORT NSString *const errorTitle;
 FOUNDATION_EXPORT NSString *const addEditController;
-
+FOUNDATION_EXPORT NSString *const displayViewController;
+FOUNDATION_EXPORT NSString *const signUpController;
+FOUNDATION_EXPORT NSString *const navigationController;
+FOUNDATION_EXPORT NSString *const mainStoryBoard;
+FOUNDATION_EXPORT NSString *const invalidUsernamePassword;
+FOUNDATION_EXPORT NSString *const userAlreadyExist;
 #endif /* Constants_h */

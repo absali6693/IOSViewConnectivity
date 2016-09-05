@@ -7,15 +7,17 @@
 //
 
 #import "DisplayViewController.h"
-#import "TableCellPrototype.h"
+#import "TableCell.h"
 #import "AddViewController.h"
+#import "SignInViewController.h"
 
 @interface DisplayViewController () <UITableViewDataSource,UITableViewDelegate> {
     NSMutableArray *taskDataArray;
     int indexToBeEdited;
+    User *userData;
 }
 
-@property (weak, nonatomic) IBOutlet UITableView *TableviewContainer;
+@property (weak, nonatomic) IBOutlet UITableView *tableviewContainer;
 
 @end
 
@@ -23,6 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableviewContainer.estimatedRowHeight = 111.0;
+    self.tableviewContainer.rowHeight = UITableViewAutomaticDimension;
+    [self.navigationItem setHidesBackButton:YES animated:YES];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -36,22 +41,14 @@
 }
 
 - (UITableViewCell *)tableView : (UITableView *)tableView cellForRowAtIndexPath : (NSIndexPath *)indexPath {
-    TableCellPrototype *cell = (TableCellPrototype *)[tableView dequeueReusableCellWithIdentifier : cellPrototype];
+    TableCell *cell = (TableCell *)[tableView dequeueReusableCellWithIdentifier : cellPrototype];
     if(cell == nil) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed : cellPrototype owner : self options : nil];
         cell = [nib objectAtIndex : 0];
     }
     int row = (int)[indexPath row];
     Task *task = [taskDataArray objectAtIndex : row];
-    tableView.estimatedRowHeight = 111.0;
-    tableView.rowHeight = UITableViewAutomaticDimension;
-    cell.taskLabel.text = task.task;
-    cell.descriptionForTaskLabel.text = task.descriptionOfTask;
-    cell.timeRequiredLabel.text = task.timeOfTask;
-    cell.deleteTheTaskButton.tag = indexPath.row;
-    cell.editTheTaskButton.tag = indexPath.row;
-    [cell.deleteTheTaskButton addTarget : self action : @selector(deleteTaskClick :) forControlEvents : UIControlEventTouchUpInside];
-    [cell.editTheTaskButton addTarget : self action : @selector(editTaskClick :) forControlEvents :UIControlEventTouchUpInside];
+    [cell addDataToTableCellWithTask:task index : (int)indexPath.row deleteToMethod : @selector(deleteTaskClick :) editToMethod : @selector(editTaskClick :) uiViewController : self];
     return cell;
 }
 
@@ -64,11 +61,9 @@
     }
 }
 
-- (void) prepareForSegue : (UIStoryboardSegue *)segue sender : (id)sender {
-    if([segue.identifier isEqualToString : addSegue]) {
-        AddViewController *addViewController = segue.destinationViewController;
-        addViewController.delegate = self;
-    }
+- (void)setUserData : (User *)user {
+    userData = user;
+    taskDataArray = [NSMutableArray arrayWithArray:[user getTasks]];
 }
 
 - (void)sendDataToDisplayViewController : (Task *)task {
@@ -76,28 +71,48 @@
         taskDataArray = [[NSMutableArray alloc] init];
     }
     [taskDataArray addObject : task];
-    [self.TableviewContainer reloadData];
+    if([userData getTasks] == nil)
+    {
+        [userData initTasks];
+    }
+    [userData addTask : task];
+    [self.tableviewContainer reloadData];
 }
 
 - (void)sendEditedDataToDisplayViewController : (Task *)task {
     [taskDataArray replaceObjectAtIndex : indexToBeEdited withObject : task];
-    [self.TableviewContainer reloadData];
+    [userData editTask:task atPosition:indexToBeEdited];
+    [self.tableviewContainer reloadData];
 }
 
 - (IBAction)deleteTaskClick : (id)sender {
     UIButton *senderButton = (UIButton*) sender;
     [taskDataArray removeObjectAtIndex : (int)senderButton.tag];
-    [self.TableviewContainer reloadData];
+    [self.tableviewContainer reloadData];
 }
+
+- (IBAction)addTaskClick : (id)sender {
+    AddViewController *addViewController = [self.storyboard instantiateViewControllerWithIdentifier : addEditController];
+    addViewController.delegate = self;
+    addViewController.title = @"Add Task";
+    [self.navigationController pushViewController : addViewController animated : YES];
+}
+
+- (IBAction)signOutClicked:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 - (IBAction)editTaskClick : (id)sender {
     UIButton *senderButton = (UIButton*) sender;
     indexToBeEdited = (int)senderButton.tag;
     Task *task =  [taskDataArray objectAtIndex : indexToBeEdited];
-    AddViewController *addViewController = [self.storyboard instantiateViewControllerWithIdentifier : addEditController];
-    [addViewController editTask : task];
-    addViewController.delegate = self;
-    [self.navigationController pushViewController : addViewController animated : YES];
+    AddViewController *editViewController = [self.storyboard instantiateViewControllerWithIdentifier : addEditController];
+    [editViewController editTask : task];
+    
+    editViewController.title = @"Edit Task";
+    editViewController.delegate = self;
+    [self.navigationController pushViewController : editViewController animated : YES];
 }
 
 @end

@@ -42,35 +42,31 @@
 
 - (IBAction)add : (id)sender {
     Task *data;
+    data = [[Task alloc]initWithTask : self.taskTextField.text descriptionOfTask : self.descriptionTextField.text timeOfTask : self.timeRequiredTextField.text];
     if(edit == YES) {
-        if(self.descriptionTextField.text.length < 1 || self.taskTextField.text.length < 1|| self.timeRequiredTextField.text.length < 1) {
-            [self showAlert];
-        }
-        else {
+        if([self isValid])
             edit = NO;
-            data = [[Task alloc]initWithTask : self.taskTextField.text descriptionOfTask : self.descriptionTextField.text timeOfTask : self.timeRequiredTextField.text];
             [self.delegate sendEditedDataToDisplayViewController : data];
-            [[self navigationController] popViewControllerAnimated : YES];
         }
-    }
     else {
-        if(self.descriptionTextField.text.length < 1 || self.taskTextField.text.length < 1 || self.timeRequiredTextField.text.length < 1) {
-            [self showAlert];
-        }
-        else {
-            data = [[Task alloc]initWithTask : self.taskTextField.text descriptionOfTask : self.descriptionTextField.text timeOfTask : self.timeRequiredTextField.text];
-            data.task = self.taskTextField.text;
-            data.descriptionOfTask = self.descriptionTextField.text;
-            data.timeOfTask = self.timeRequiredTextField.text;
+        if([self isValid]) {
             [self.delegate sendDataToDisplayViewController : data];
-            [[self navigationController] popViewControllerAnimated : YES];
         }
     }
+    [[self navigationController] popViewControllerAnimated : YES];
 }
 
 - (void)editTask : (Task *)task {
     edit = YES;
     taskToEdit = task;
+}
+
+- (BOOL)isValid {
+    if(self.descriptionTextField.text.length < 1 || self.taskTextField.text.length < 1|| self.timeRequiredTextField.text.length < 1) {
+        [self showAlert];
+        return NO;
+    }
+    return YES;
 }
 
 - (void)showAlert {

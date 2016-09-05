@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableCellPrototype : UITableViewCell
+@interface TableCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *taskLabel;
 @property (strong, nonatomic) IBOutlet UILabel *descriptionForTaskLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeRequiredLabel;
 @property (weak, nonatomic) IBOutlet UIButton *deleteTheTaskButton;
 @property (weak, nonatomic) IBOutlet UIButton *editTheTaskButton;
+
+- (void) addDataToTableCellWithTask : (Task *)task index : (int)index deleteToMethod : (SEL)deleteTaskClick editToMethod : (SEL)editTaskClick uiViewController : (UIViewController *)uiViewController;
 
 @end
